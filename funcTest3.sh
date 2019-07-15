@@ -2,7 +2,7 @@
 phone_number="0545261611"
 test_message="This is a test message from your mezzanine" 
 MODEM="/dev/tty96B0"
-apn="\"sphone.pelephone,net.il\""
+apn="\"sphone.pelephone.net.il\""
 username="\"pcl@3g\""
 password="\"rl\""
 pingto="\"8.8.8.8\""
@@ -11,10 +11,8 @@ pingto="\"8.8.8.8\""
 function get_response
 {
         local ECHO
-        # cat will read the response, then die on timeout
         cat <&5 >$TMP &
         echo "$1" >&5
-        # wait for cat to die
         wait $!
         
 		sleep 1
@@ -36,10 +34,8 @@ function get_response
 function get_ping_response
 {
         local ECHO
-        # cat will read the response, then die on timeout
         cat <&5 >$TMP &
         echo "$1" >&5
-        # wait for cat to die
         wait $!
         
 		sleep 5
