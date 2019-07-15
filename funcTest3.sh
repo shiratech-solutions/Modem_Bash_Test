@@ -1,5 +1,5 @@
 #!/bin/bash
-phone_number="0545261611"
+phone_number="+972545535041"
 test_message="This is a test message from your mezzanine" 
 MODEM="/dev/tty96B0"
 apn="\"sphone.pelephone.net.il\""
